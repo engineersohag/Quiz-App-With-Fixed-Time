@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f1f1f1;
+}
+.myQuizApp,
+.rulesBox,
+.questions{
+    width: 320px;
+    height: 580px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: rgb(0, 0, 0 / 10%) 0px 10px 50px;
+    border-radius: 48px;
+}
+.img img{
+    width: 100%;
+}
+.text{
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+}
+.text h3{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.text p{
+    font-size: 15px;
+    line-height: 30px;
+}
+.myBtn{
+    width: 60%;
+    margin-left: 171px !important;
+    margin-top: 26px;
+}
+.myBtn button,
+.buttons button{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 25px;
+    border-radius: 57px 0px 51px 0px;
+    transition: 0.4s ease-in-out !important;
+}
+.myBtn button:hover{
+    background-color: rgb(29, 194, 194);
+}
+
+/* --- Rules Section --- */
+.rulesBox{
+    opacity: 0;
+    pointer-events: none;
+}
+.rulesBox.activeInfo{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.rulesTitle{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+.rulesList{
+    width: 80%;
+    margin: auto;
+}
+ol{
+    margin-top: 20px;
+}
+ol li{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 25px;
+    text-align: justify;
+    margin-top: 8px;
+}
+
+.buttons button{
+    border-radius: 0;
+    margin-top: 56px;
+}
+.exitBtn{
+    border-radius: 0px 47px 0px 46px !important;
+}
+
+.continueBtn{
+    border-radius: 57px 0px 46px 0px !important;
+    margin-left: 38px;
+}
+.exitBtn:hover{
+    background-color: red;
+}
+.continueBtn:hover{
+    background-color: rgb(29, 194, 194);
+}
+
+/*questions*/
+
+.questions{
+    opacity: 0;
+    pointer-events: none;
+    margin-top: 2px;
+}
+.questions.activeQue{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.questionHeader{
+    position: relative;
+    z-index: 2;
+    height: 70px;
+    padding: 0 30px;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.questionHeader .title{
+    font-size: 15px;
+    font-weight: 600;
+}
+.timeCount{
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    height: 25px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    padding-left: 8px;
+}
+.timeCount .seconds{
+    font-size: 18px;
+    font-weight: 500;
+    height: 26px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 26px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+.timeLine{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: #007bff;
+}
+.section{
+    padding: 25px 30px 20px 30px;
+}
+#text{
+    font-size: 25px;
+    font-weight: 600;
+}
+.myOptions{
+    padding: 20px 0;
+    display: block;
+}
+.options{
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.options:hover {
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    margin-top: 5px;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+}
+.total_que{
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+/*--- Correct Answer Part ---*/
+.options.correct{
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+.options.incorrect{
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f8d7da;
+}
+.options.disabled{
+    pointer-events: none;
+}
+.options i{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.questions header .timeLine{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: #007bff;
+}
+
+footer button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 6px 25px;
+    outline: none;
+    border: none;
+    border-radius: 57px 0px 51px 0px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 10px 50px;
+    background: tomato;
+    cursor: pointer;
+    color: #f1f1f1;
+    transition: all 0.3s ease;
+    margin-top: 11px;
+    display: none;
+}
+footer .nextBtn:hover{
+    background: rgb(29, 194, 194);
+}  
+
+
+/*-- Result box --*/
+
+.result_box{
+    width: 320px;
+    height: 580px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    display: flex;
+    background: #fff;
+    border-radius: 45px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.result_box img{
+    width: 100%;
+    height: 170px;
+    margin-bottom: 180px;
+}
+.complete_text{
+    font-size: 19px;
+    font-weight: 500;
+}
+.score_text span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 10px;
+}
+.score_text span p{
+    padding: 0 4px;
+    font-weight: 600;
+}
+
+.result_box .buttons{
+    display: flex;
+    margin: 20px 0px;
+}
+.result_box .buttons button{
+    margin: 0 10px;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.result_box .buttons .restart1:hover{
+    background: rgb(29, 194, 194);
+}
+.result_box .buttons .quit:hover{
+    background: red;
+}
+
+.result_box.activeResult{
+    z-index: 5;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
